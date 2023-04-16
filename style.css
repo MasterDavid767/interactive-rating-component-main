@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+:root
+{
+    --Light-blue: hsl(212, 20%, 25%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 19%, 73%);
+    --Orange: hsl(25, 97%, 53%);
+
+
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+    display: grid;
+    color: white;
+}
+
+main{
+    margin: auto;
+    width: 90vw;
+    max-width: 400px;
+    background-color: hsl(213, 19%, 18%);
+
+    padding: 1.5rem;
+    border-radius: 2em;
+}
+
+.major{
+    display: block;
+}
+.number-selected{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem .5rem;
+}
+
+/*------------------ Section major -----------------*/
+.image img{
+    background-color: var(--Light-blue);
+    padding: .7rem;
+    border-radius: 50%;
+
+    display: block;
+}
+
+.title{
+    margin: 1rem 0;
+}
+
+.paragraph{
+    margin: 1rem 0;
+    color: var(--Light-Grey);
+}
+
+/*------------------ Botones -------------------*/
+.for-buttons{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 1fr;
+
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+
+    margin: 1.5rem auto 0;
+}
+.button{
+    padding: .5rem;
+    margin: auto;
+    width: 45px;
+    height: 45px;
+    
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    color:  var(--Light-Grey);
+    background-color: var(--Light-blue);
+
+    font-weight: 600;
+
+    transition: background-color .4s, color .2s;
+}
+.button:hover{
+    background-color: var(--Light-Grey);
+    color: var(--Light-blue);
+}
+.active-button{
+    background-color: white;
+    color: var(--Orange);
+}
+.active-button:hover{
+    background-color: white;
+    color: black;
+}
+
+#submit{
+    grid-column: 1/-1;
+    width: 95%;
+    margin: 0 auto;
+    padding: .7rem 0;
+    border: none;
+    border-radius: 2rem;
+    
+    color: white;
+    background-color: var(--Orange);
+    
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    transition: background-color .2s, color .1s;
+}
+#submit:active{
+    background-color: white;
+    color: var(--Orange);
+
+}
+
+/*---------------- Section Thanks --------------------*/
+.image-selected img{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.selected-num{
+    text-align: center;
+    width: max-content;
+
+    background-color: var(--Light-blue);
+    border-radius: 1rem;
+
+    padding: .4rem 1rem;
+    margin: 1rem auto;
+    color: var(--Orange);
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.paragraph.thanks{
+    margin: 1rem 0 0;
+    text-align: center;
+}
+.formBack{
+    width: 100%;
+}
+.backBoton{
+    display: block;
+    padding: .6rem;
+    margin-top: 1rem;
+
+    border: none;
+    background-color: var(--Orange);
+    color: white;
+    font-weight: 600;
+    border-radius: .7rem;
+    text-transform: uppercase;
+
+    width: 40%;
+
+    transform-origin: left;
+    transform: scale(.8);
+
+    cursor: pointer;
+}
+.backBoton:active{
+    background-color: white;
+    color: var(--Orange);
+}
